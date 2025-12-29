@@ -86,7 +86,20 @@ src/
 
 ## פריסה
 
-האפליקציה ניתנת לפריסה בכל שירות static hosting:
+### GitHub Pages (מומלץ)
+
+הפרויקט מוגדר עם GitHub Actions לפריסה אוטומטית:
+
+1. לך להגדרות הריפו: Settings → Pages
+2. תחת "Build and deployment" בחר: **GitHub Actions**
+3. כל push ל-`main` יפרס אוטומטית
+
+**חשוב:** אם שם הריפו שלך שונה מ-`LoveMeTender`, עדכן את `base` ב-`vite.config.ts`:
+```ts
+base: '/your-repo-name/',
+```
+
+### אפשרויות נוספות
 
 - **Netlify**: `npm run build` → העלה את תיקיית `dist`
 - **Vercel**: חבר ישירות מ-GitHub
